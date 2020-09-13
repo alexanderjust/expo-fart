@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, StyleSheet, View } from "react-native";
+import { Dimensions, Image, StyleSheet, View } from "react-native";
 import MainButton from "../components/MainButton";
 import { LinearGradient } from "expo-linear-gradient";
 
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: "100%",
-    marginVertical: 30,
+    marginVertical: Dimensions.get("window").height / 30,
     resizeMode: "contain",
   },
   imageContainer: {
@@ -50,19 +50,19 @@ const styles = StyleSheet.create({
     height: "70%",
   },
   loginContainer: {
-    width: 350,
-    bottom: 30,
-    marginVertical: 30,
+    width: Dimensions.get("window").width * 0.80,
+    bottom: Dimensions.get("window").height / 30,
+    marginVertical: Dimensions.get("window").height / 30,
   },
   anonymous: {
     backgroundColor: "#A5A5A5",
-    marginVertical: 10,
+    marginVertical: Dimensions.get("window").height / 40,
     alignItems: "center",
     borderWidth: 1,
     borderColor: "black",
   },
   Login: {
-    marginTop: 30,
+    marginTop: Dimensions.get("window").height / 30,
     alignItems: "center",
     borderWidth: 1,
     borderColor: "black",
